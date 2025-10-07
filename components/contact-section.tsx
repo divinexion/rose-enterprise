@@ -48,52 +48,7 @@ export default function ContactSection() {
           </p>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
-          <Card className="border-border/50 bg-card/60 backdrop-blur-md">
-            <CardHeader>
-              <CardTitle>Contact details</CardTitle>
-            </CardHeader>
-            <CardContent className="text-sm">
-              <address id="about" className="not-italic">
-                <p className="font-medium">Rose Enterprise</p>
-                <p>123 Business Park, Suite 405</p>
-                <p>San Francisco, CA 94107</p>
-                <p>United States</p>
-              </address>
-              <ul className="mt-4 space-y-1">
-                <li>
-                  <span className="text-muted-foreground">Email:</span>{" "}
-                  <a
-                    className="underline decoration-primary/30 underline-offset-4 hover:text-foreground"
-                    href="mailto:hello@roseenterprise.com"
-                  >
-                    hello@roseenterprise.com
-                  </a>
-                </li>
-                <li>
-                  <span className="text-muted-foreground">Phone:</span>{" "}
-                  <a
-                    className="underline decoration-primary/30 underline-offset-4 hover:text-foreground"
-                    href="tel:+15551234567"
-                  >
-                    +1 (555) 123-4567
-                  </a>
-                </li>
-                <li>
-                  <span className="text-muted-foreground">Hours:</span> Mon–Fri, 9am–6pm PT
-                </li>
-              </ul>
-              <a
-                href="https://maps.google.com/?q=123%20Business%20Park%2C%20San%20Francisco%2C%20CA"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 inline-flex text-sm text-muted-foreground underline decoration-primary/30 underline-offset-4 hover:text-foreground"
-              >
-                View on Google Maps
-              </a>
-            </CardContent>
-          </Card>
-
+        <div className="mt-10 mx-auto max-w-2xl">
           <Card className="border-border/50 bg-card/60 backdrop-blur-md">
             <CardHeader>
               <CardTitle>Send a message</CardTitle>
@@ -136,12 +91,6 @@ export default function ContactSection() {
                   <Button type="submit" disabled={loading}>
                     {loading ? "Sending…" : "Send message"}
                   </Button>
-                  <a
-                    href="mailto:hello@roseenterprise.com"
-                    className="text-sm text-muted-foreground underline decoration-primary/30 underline-offset-4 hover:text-foreground"
-                  >
-                    or email us directly
-                  </a>
                 </div>
                 {status && (
                   <p role="status" className="text-sm text-muted-foreground">
